@@ -15,6 +15,11 @@
             <h1>Introduction</h1>
             <h2>So, what exactly is BalladGPT?</h2>
             <p>BalladGPT is a generative AI model trained on a multitude of ballads from the 18th, 19th, and 20th century. BalladGPT is a finetuned version of GPT 2. Currently, due to the small dataset size, BalladGPT's content will not generate satisfactory ballads. Although the style is similar to ballads, the coherency of the outputs are not optimal.</p>
+            <h2>How can I use BalladGPT?</h2>
+            <p>Using BalladGPT is very simple. You can use it as you would use any GPT 2 based model:</p>
+            <pre><code class="language-python">from transformers import pipeline
+generator = pipeline('text-generation', model='balladgpt/balladgpt-v2')
+print(generator("Once upon a time", do_sample=True, min_length=20)[0]['generated_text'])</code></pre>
         </div>
     </main>
     <script src="main.min.js"></script>
