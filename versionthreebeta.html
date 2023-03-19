@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BalladGPT V3 Beta</title>
+    <link rel="stylesheet" href="main.min.css">
+</head>
+
+<body>
+    <div id="nav">
+    </div>
+    <main>
+        <div class="article">
+            <h1>BalladGPT V3 Beta</h1>
+            <p>BalladGPT V3 (Beta) was released on March 19, 2023 and currently is in a testing phase. The dataset is slightly larger than V2 (1.2 MB vs 926 KB).</p>
+            <h2>Running BalladGPT V3</h2>
+            <p>To generate content using BalladGPT V3, just change the model name to <code>balladgpt/balladgpt-v3-beta</code>.</p>
+            <pre><code class="language-python">from transformers import pipeline
+generator = pipeline('text-generation', model='balladgpt/balladgpt-v3-beta')
+print(generator("(Your Prompt)", do_sample=True, min_length=20)[0]['generated_text'])</code></pre>
+            <p><b>BalladGPT V3</b> is still in beta and should not be relied upon for production purposes.</p>
+        </div>
+    </main>
+    <script src="main.min.js"></script>
+</body></html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unprompted Generation</title>
+    <link rel="stylesheet" href="main.min.css">
+</head>
+
+<body>
+    <div id="nav">
+    </div>
+    <main>
+        <div class="article">
+            <h1>Unprompted Generation</h1>
+            <h2>What is Unprompted Generation?</h2>
+            <p>Unprompted generation is very simple: allowing the model to generate a ballad without a prompt.</p>
+            <p><b>Warning:</b> Unprompted generation may generate content not suitable for all ages as this allows the AI to be more creative, generating somewhat random text.</p>
+            <h2>How can I use Unprompted Generation?</h2>
+            <p>To use unprompted generation, just leave the prompt blank:</p>
+            <p>1. Install Transformers</p>
+            <pre><code class="language-bash">pip3 install transformers</code></pre>
+            <p>2. Download model from Hugging Face via Transformers and generate text</p>
+            <pre><code class="language-python">from transformers import pipeline
+generator = pipeline('text-generation', model='balladgpt/balladgpt-v2')
+print(generator("", do_sample=True, min_length=20)[0]['generated_text'])</code></pre>
+            <p>Running this code may generate an output such as:</p>
+            <pre><code>Once upon a time to come
+There was the great, wild bird of the night, the white-trucking-horse--
+There were the wild-cock and the porter
+To be followed by the wild-porter.
+And then one at a time--
+The wild-porter said: "My own, my merry-niece,
+We are the wild-porter, no more!"
+All together in the wild-porter's shadow we drew.
+At the back of the barns the porter sang: "Bowl of the week, now it is true;
+The fresh-grown corn is still brown, the green leaves are bright!
+And in the woods of the winter wood,
+The porter drew his straw up;
+And the green-crested pine trees did not grow till
+Until the week was past;
+And when the new winter heat had returned,
+The pine woods were turned pale,
+And all day long the snow lay.
+The farmer looked at the old-fashioned barns and spoke to her corn,
+And heard the sweet and flower-like rustling sound of hay
+With the growing winter-beat and clover-wind.
+He heard the hoofs and the hay's gray tresses grow and the sun shine.
+There was the rustling of the yellow-sweets, and the brightening of the yellow peonies
+And the new spring began,
+And at the old-fashioned barns, the hay in the summer heat
+All grew.
+So on the old barn, and at the old-fashioned barn windows
+With old corn and blue-roofed leaves, the hay stood bright.
+The sweet flowers bloomed with new flower-like songs,
+And in the green-crested pine trees, the wood-porters and the hay,
+The wood-porter laughed, "How sweet!"
+And on the straw of the spring-fed hay-sawned, the white-trucking-horse sang,
+The grass the wood with gold and rose,
+The bread-porter's spake, the hag-dogs, the hay at her side,
+And, with the corn in the summer's harvest's crook she sang,
+"What is the harvest?" "The harvest grows and all
+As fast as the hogs that have grown--
+And all is grown as well as all is kept</code></pre>
+        </div>
+    </main>
+    <script src="main.min.js"></script>
+</body></html>
